@@ -17,7 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
-// Configurar el contexto de base de datos con PostgreSQL
+// Configurar el contexto de base de datos con sql serve
 builder.Services.AddDbContext<OperativeContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
